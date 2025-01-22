@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms em HTML</title>
+</head>
+<body>
+    <h1>Forms em HTML</h1>
+    <hr>
+
+    <form action="https://httpbin.org/anything" method="get" autocomplete="off">
+
+        <article>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" size="30" maxlength="30" placeholder="✍ inserir nome" autocomplete="off" autofocus required>
+            <span>"preenchimento obrigatório"</span>
+        <br>
+            <label for="apelido">Apelido:</label><br>
+            <input type="text" id="apelido" name="apelido" disabled>
+        </article>
+
+        <article>
+            <label for="comentarios">Comentários:</label><br>
+            <textarea name="comentarios" id="comentarios" cols="50" rows="10" ></textarea>
+        </article>
+
+        <article>
+            <h1>Que estilo de música prefere?</h1>
+            <input type="radio" id="rock" name="musica" value="rock" checked>
+            <label for="rock">Rock</label>
+
+            <input type="radio" id="pop" name="musica" value="pop">
+            <label for="pop">Pop</label>
+
+            <input type="radio" id="triphop" name="musica" value="triphop">
+            <label for="triphop">Trip-Hop</label>
+        </article>
+
+        <article>
+            <h1>Que serviço utiliza para ouvir música?</h1>
+            <input type="checkbox" name="serviço" id="spotify" value="spotify" checked>
+            <label for="spotify">Spotify</label>
+
+            <input type="checkbox" name="serviço" id="apple" value="apple">
+            <label for="apple">Apple Music</label>
+
+            <input type="checkbox" name="serviço" id="youtube" value="youtube">
+            <label for="youtube">Youtube</label>
+        </article>
+
+        <article>
+            <h1>Em que device costuma ouvir música?</h1>
+            <label for="device">Device</label>
+            <select name="device" id="device">
+                <option value="none">...</option>
+                <option value="walkman">Walkman</option>
+                <option value="discman">Discman</option>
+                <option value="radio">Rádio</option>
+                <option value="ipod">IPod</option>
+            </select>
+        </article>
+
+        <article>
+            <h1>Em que device costuma ouvir música? - 2</h1>
+            <label for="device">Device</label><br>
+            <p>Pode escolher vários com o "Ctrl"</p>
+            <select name="device" id="device" multiple size="5">
+                <option value="none">...</option>
+                <option value="radio">Rádio</option>
+                <option value="giradiscos">Gira Discos</option>
+                <option value="walkman">Walkman</option>
+                <option value="discman">Discman</option>
+                <option value="computador">Computador</option>
+                <option value="ipod">IPod</option>
+            </select>
+        </article>
+
+        <article>
+            <h1>Qual o browser que utiliza?</h1>
+            <label for="browser">Browser:</label>
+            <input type="text" id="browser" name="browser" list="browsers">
+            <datalist id="browsers">
+                <option>Edge</option>
+                <option>Chrome</option>
+                <option>FireFox</option>
+                <option>Brave</option>
+                <option>Safari</option>
+            </datalist>
+        </article>
+
+        <article>
+            <h1>Opções de text input</h1>
+            <label for="color">Color:</label>
+            <input type="color" name="color"><br>
+            <label for="date">Date:</label>
+            <input type="date" name="date"><br>
+            <label for="time">Time:</label>
+            <input type="time" name="time"><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password"><br>
+            <label for="number">Number:</label>
+            <input type="number" name="number"><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required><br>
+            <label for="url">URL:</label>
+            <input type="url" name="url"><br>
+            <label for="search">Search:</label>
+            <input type="search" name="search"><br>
+            <input type="range" name="range" min="0" max="10" value="8" step="2">
+        </article>
+
+        <p>
+        <input type="reset" value="Limpar campos">    
+        <input type="submit" value="Enviar">
+        <button>SUBMIT</button>
+        </p>
+    
+    </form>
+    
+</body>
+</html>
